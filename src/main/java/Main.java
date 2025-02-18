@@ -69,11 +69,13 @@ public class Main {
             System.out.println("SEMICOLON ; null");
             break;
           case '$':
-            System.out.println("[line 1] Error: Unexpected character: $");
+            System.err.println("[line 1] Error: Unexpected character: $");
             System.exit(65);
+            break;
           case '#':
-            System.out.println("[line 1] Error: Unexpected character: #");
+            System.err.println("[line 1] Error: Unexpected character: #");
             System.exit(65);
+            break;
         }
       }
       System.out.println("EOF  null");
