@@ -42,7 +42,7 @@ public class Main {
             System.out.println("LEFT_PAREN ( null");
             break;
           case ')':
-            System.out.println("RIGHT_PAREN ( null");
+            System.out.println("RIGHT_PAREN ) null");
             break;
         }
       }
