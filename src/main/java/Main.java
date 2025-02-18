@@ -44,6 +44,12 @@ public class Main {
           case ')':
             System.out.println("RIGHT_PAREN ) null");
             break;
+          case '{':
+            System.out.println("LEFT_BRACE { null");
+            break;
+          case '}':
+            System.out.println("RIGHT_PAREN } null");
+            break;
         }
       }
       System.out.println("EOF  null");
