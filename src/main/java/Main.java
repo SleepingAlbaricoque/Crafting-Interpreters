@@ -36,7 +36,17 @@ public class Main {
 //       System.out.println("EOF  null"); // Placeholder, remove this line when implementing the scanner
 //     }
     if (fileContents.length() > 0) {
-      throw new RuntimeException("Scanner not implemented");
+      for(char ch : fileContents.toCharArray()){
+        switch(ch){
+          case '(':
+            System.out.println("LEFT_PAREN ( null");
+            break;
+          case ')':
+            System.out.println("RIGHT_PAREN ( null");
+            break;
+        }
+      }
+      System.out.println("EOF  null");
     } else {
       System.out.println("EOF  null"); // Placeholder, remove this line when implementing the scanner
     }
