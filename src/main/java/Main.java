@@ -48,7 +48,7 @@ public class Main {
             System.out.println("LEFT_BRACE { null");
             break;
           case '}':
-            System.out.println("RIGHT_PAREN } null");
+            System.out.println("RIGHT_BRACE } null");
             break;
         }
       }
