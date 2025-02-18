@@ -28,13 +28,8 @@ public class Main {
       System.exit(1);
     }
 
-    // Uncomment this block to pass the first stage
-    // 
-//     if (fileContents.length() > 0) {
-//       throw new RuntimeException("Scanner not implemented");
-//     } else {
-//       System.out.println("EOF  null"); // Placeholder, remove this line when implementing the scanner
-//     }
+    boolean hasErrors = false;
+
     if (fileContents.length() > 0) {
       for(char ch : fileContents.toCharArray()){
         switch(ch){
@@ -69,18 +64,23 @@ public class Main {
             System.out.println("SEMICOLON ; null");
             break;
           case '$':
-            System.err.println("[line 1] Error: Unexpected character: $");
-            System.exit(65);
-            break;
           case '#':
-            System.err.println("[line 1] Error: Unexpected character: #");
-            System.exit(65);
+            System.err.println("[line 1] Error: Unexpected character: " + ch);
+            hasErrors = true;
+            break;
+          default:
             break;
         }
       }
       System.out.println("EOF  null");
     } else {
       System.out.println("EOF  null"); // Placeholder, remove this line when implementing the scanner
+    }
+
+    if (hasErrors) {
+      System.exit(65);
+    }else{
+      System.exit(0);
     }
   }
 }
